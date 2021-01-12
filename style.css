@@ -11,6 +11,16 @@ License URI:    http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:    cat
 */
 
+/* 1. UTILITY FIRST CLASSES     */
+/* 2. HTML ELEMENTS             */
+
+/* 1. UTILITY FIRST CLASSES     */
+.pt-0 {
+	padding-top: 0;
+}
+
+
+/* 2. HTML ELEMENTS             */
 h2 {
 	padding-top: 2em;
 }
@@ -18,3 +28,4 @@ h2 {
 h3, h4 {
 	padding-top: 1.3em;
 }
+
