@@ -49,7 +49,7 @@ function cat_register_action_cpts() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 20,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
 		'taxonomies'         => array( 'category', 'post_tag' ),
 		'show_in_rest'       => true,
 	);
