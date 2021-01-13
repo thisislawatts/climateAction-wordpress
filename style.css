@@ -33,3 +33,38 @@ h3, h4 {
 .type-action .nv-meta-list {
 	display: none;
 }
+
+/* 20. BLOCKS                   */
+
+/* 20A. YOAST FAQ SCHEMA BLOCKS */
+.schema-faq-question {
+	position: relative;
+	display: block;	
+	margin-bottom: 1rem;
+	padding-right: 40px;
+	cursor: pointer;
+}
+
+.schema-faq-question::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-family: 'Dashicons';
+	content: "\f347";
+	color: #004880;
+	font-size: 40px;
+	height: 40px;
+	width: 40px;
+	transform: rotate(0deg);
+	transition: transform 0.3s linear;
+}
+.is-open .schema-faq-question::after {
+	transform: rotate(180deg);
+}
+.schema-faq-answer {
+	display: none;
+	margin-bottom: 2rem;
+}
+.is-open .schema-faq-answer {
+	display: block;
+}
