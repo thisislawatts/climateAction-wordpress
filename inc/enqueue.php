@@ -14,8 +14,8 @@ if ( ! function_exists( 'neve_child_load_css' ) ) :
 	 */
 	function neve_child_load_css() {
 
-		$css_version = filemtime( get_stylesheet_directory() . 'style.css' );
-		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'neve-style' ), filemtime( get_stylesheet_directory() . '/assets/css/main.min.css' ) );
+		$css_version = filemtime( get_stylesheet_directory() . '/style.css' );
+		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'neve-style' ), $css_version );
 
 	}
 endif;
