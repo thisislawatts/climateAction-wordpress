@@ -29,3 +29,7 @@ h3, h4 {
 	padding-top: 1.3em;
 }
 
+/* 3. ACTIONS                  */
+.type-action .nv-meta-list {
+	display: none;
+}
