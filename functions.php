@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require 'inc/enqueue.php';
+require 'inc/analytics.php';
 require 'inc/editor.php';
 require 'inc/image-utilities.php';
 
