@@ -30,21 +30,37 @@ h3, h4 {
 }
 
 /* 3. ACTIONS                  */
+
+/* Hide action meta info like written by, date written etc. */
 .type-action .nv-meta-list {
 	display: none;
 }
+.action-template-default .entry-header:first-child {
+	margin-top: 60px;
+}
+
 
 /* 20. BLOCKS                   */
 
 /* 20A. YOAST FAQ SCHEMA BLOCKS */
+.schema-faq-section {
+	margin: 0 -15px;
+}
+
+/* QUESTION STYLING    */
 .schema-faq-question {
 	position: relative;
 	display: block;	
 	margin-bottom: 1rem;
-	padding-right: 40px;
+	padding: 0 50px 0 15px;
 	cursor: pointer;
 }
-
+/* Styling for question on hover and when the question is open */
+.schema-faq-question:hover,
+.is-open .schema-faq-question {
+	background-color: #ECF2AD;
+	border-radius: 5px;
+}
 .schema-faq-question::after {
 	position: absolute;
 	top: 0;
@@ -55,14 +71,23 @@ h3, h4 {
 	font-size: 40px;
 	height: 40px;
 	width: 40px;
+	margin-right: 10px;
 	transform: rotate(0deg);
 	transition: transform 0.3s linear;
 }
+.schema-faq-question:hover::after {
+	color: black;
+}
 .is-open .schema-faq-question::after {
 	transform: rotate(180deg);
+	margin-top: -12px;
+	color: black;
 }
+
+/* ANSWER STYLING    */
 .schema-faq-answer {
 	display: none;
+	padding: 0 15px;
 	margin-bottom: 2rem;
 }
 .is-open .schema-faq-answer {

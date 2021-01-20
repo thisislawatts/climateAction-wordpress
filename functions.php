@@ -15,4 +15,5 @@ require 'inc/editor.php';
 require 'inc/image-utilities.php';
 
 require 'inc/custom-post-types.php';
+require 'inc/comments.php';
 
