@@ -18,6 +18,9 @@ Text Domain:    cat
 .pt-0 {
 	padding-top: 0;
 }
+.pb-1 {
+	padding-bottom: 1rem;
+}
 
 
 /* 2. HTML ELEMENTS             */
@@ -31,10 +34,26 @@ h3, h4 {
 
 /* 3. ACTIONS                  */
 
+/* 3A. ACTION TEASERS        */
 /* Hide action meta info like written by, date written etc. */
 .type-action .nv-meta-list {
 	display: none;
 }
+.type-action .article-content-col {
+	border-radius: 8px;
+	box-shadow: 0px 0px 16px 4px rgba(0,0,0,.16);
+	padding: 1.6rem;
+}
+.type-action .article-content-col .content {
+	border: 0;
+	padding-bottom: 0;
+}
+.type-action .article-content-col .blog-entry-title{
+	padding-top: 0;
+	padding-bottom: 0.6rem;
+}
+
+/* 3B. SINGLE ACTION PAGE    */
 .action-template-default .entry-header:first-child {
 	margin-top: 60px;
 }
