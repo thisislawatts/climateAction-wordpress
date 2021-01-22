@@ -28,7 +28,10 @@ get_header();
 				do_action( 'neve_after_post_content' );
 				?>
 
-				<?php get_template_part( 'template-parts/actions/action-other-actions' ); ?>
+				<?php 
+				get_template_part( 'template-parts/actions/action-other-actions' ); 
+				comments_template();
+				?>
 			</article>
 
 
