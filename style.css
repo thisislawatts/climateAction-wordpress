@@ -42,14 +42,18 @@ h3, h4 {
 .type-action .article-content-col {
 	border-radius: 8px;
 	box-shadow: 0px 0px 16px 4px rgba(0,0,0,.16);
-	padding: 1.6rem;
+}
+.type-action .entry-title,
+.type-action .entry-summary {
+	padding-left: 1.6rem;
+	padding-right: 1.6rem;
 }
 .type-action .article-content-col .content {
 	border: 0;
-	padding-bottom: 0;
+	/* padding-bottom: 0; */
 }
 .type-action .article-content-col .blog-entry-title{
-	padding-top: 0;
+	padding-top: 1rem;
 	padding-bottom: 0.6rem;
 }
 
