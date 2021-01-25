@@ -54,6 +54,12 @@ h3, h4 {
 }
 
 /* 3B. SINGLE ACTION PAGE    */
+.action-template-default .single-post-container .entry-content,
+.action-template-default .single-post-container .entry-header {
+	max-width: 850px !important; /* We need to overwrite any settings in the theme that can be changed. Sorry for the !important. */
+	margin-left: auto;
+	margin-right: auto;
+}
 .action-template-default .entry-header:first-child {
 	margin-top: 60px;
 }
