@@ -28,7 +28,7 @@ function cat_register_action_cpts() {
 		'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'cat' ),
 		'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'cat' ),
 		'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'Action' ),
-		'archives'              => _x( 'Action archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'Action' ),
+		'archives'              => _x( 'Action Guides', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'Action' ),
 		'insert_into_item'      => _x( 'Insert into Action', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'Action' ),
 		'uploaded_to_this_item' => _x( 'Uploaded to this Action', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'Action' ),
 		'filter_items_list'     => _x( 'Filter Actions list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'Action' ),
