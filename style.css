@@ -14,6 +14,16 @@ Text Domain:    cat
 /* 1. UTILITY FIRST CLASSES     */
 /* 2. HTML ELEMENTS             */
 
+/* 3. ACTIONS                   */
+/* 3A. ACTION TEASERS           */
+/* 3B. SINGLE ACTION PAGE       */
+
+/* 20. BLOCKS                   */
+/* 20A. YOAST FAQ SCHEMA BLOCKS */
+/* 20B. CLICK TO TWEET BLOCKS   */
+
+/* 
+
 /* 1. UTILITY FIRST CLASSES     */
 .pt-0 {
 	padding-top: 0;
@@ -79,8 +89,8 @@ h3, h4 {
 .schema-faq-question {
 	position: relative;
 	display: block;	
-	margin-bottom: 1rem;
-	padding: 0 50px 0 15px;
+	margin-bottom: 0.6rem;
+	padding: 10px 50px 10px 15px;
 	cursor: pointer;
 }
 /* Styling for question on hover and when the question is open */
@@ -120,4 +130,24 @@ h3, h4 {
 }
 .is-open .schema-faq-answer {
 	display: block;
+}
+
+/* 20B. CLICK TO TWEET BLOCKS   */
+.bctt-click-to-tweet {
+	box-shadow: 0px 0px 16px 4px rgba(0,0,0,.16);
+}
+.bctt-ctt-text {
+	display: block;
+}
+.bctt-ctt-text a {
+	font-family: inherit !important; /* Plugin uses !important, so I must too */
+	font-size: 1rem;
+}
+a.bctt-ctt-btn {
+	background-color: #004880;
+	background-position: 125px center;
+	color: white !important; /* Plugin uses !important, so I must too */
+	border-radius: 5px;
+	padding: 3px 30px 3px 10px;
+	margin-top: 0.4rem;
 }
