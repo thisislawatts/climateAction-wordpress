@@ -10,7 +10,7 @@ $actions_repeater = 'actions';
 
 <section class="">
 
-	<h2 class="pb-1">Other actions you might be interested in taking</h2>
+	<h2 class="pb-1">Other Action Guides</h2>
 
 		<div class="posts-wrapper row">
 
