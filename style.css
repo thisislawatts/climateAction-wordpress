@@ -18,6 +18,8 @@ Text Domain:    cat
 /* 3A. ACTION TEASERS           */
 /* 3B. SINGLE ACTION PAGE       */
 
+/* 10. COMMENTS                 */
+
 /* 20. BLOCKS                   */
 /* 20A. YOAST FAQ SCHEMA BLOCKS */
 /* 20B. CLICK TO TWEET BLOCKS   */
@@ -75,6 +77,20 @@ h3, h4 {
 }
 .action-template-default .entry-header:first-child {
 	margin-top: 60px;
+}
+
+
+
+/* 10. COMMENTS                 */
+#comments input[type="submit"] {
+	background-color: #004880;
+	color: white; 
+	border-radius: 5px;
+	padding: 6px 12px;
+}
+#comments input[type="submit"]:hover {
+	background-color: #1f79ac;
+	color: white;
 }
 
 
