@@ -45,6 +45,7 @@ $actions_repeater = 'actions';
 				'posts_per_page' => 3,
 				'orderby'        => 'date',
 				'order'          => 'ASC',
+				'post__not_in'   => array( get_the_ID() ),
 			);
 
 			$default_actions = new WP_Query( $args );
