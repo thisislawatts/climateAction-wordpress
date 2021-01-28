@@ -44,7 +44,10 @@ function cat_register_action_cpts() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'actions' ),
+		'rewrite'            => array(
+			'slug'       => 'actions',
+			'with_front' => false,
+		),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
