@@ -14,7 +14,9 @@ require 'inc/analytics.php';
 require 'inc/editor.php';
 require 'inc/image-utilities.php';
 
+require 'inc/widgets.php';
 require 'inc/custom-post-types.php';
+require 'inc/blog.php';
 require 'inc/comments.php';
 require 'inc/action-pages.php';
 
