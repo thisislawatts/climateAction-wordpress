@@ -18,6 +18,8 @@ Text Domain:    cat
 /* 3A. ACTION TEASERS           */
 /* 3B. SINGLE ACTION PAGE       */
 
+/* 4. BLOG                      */
+
 /* 10. COMMENTS                 */
 
 /* 20. BLOCKS                   */
@@ -79,6 +81,17 @@ h3, h4 {
 	margin-top: 60px;
 }
 
+
+/* 4. BLOG                      */
+.blog .posts-wrapper > article.type-post {
+	/* Override default tile styles so blog articles become full width instead. */
+	max-width: 100% !important;
+	flex: 0 0 100% !important;
+}
+/* Hide featured images from blog archive page */
+.blog .posts-wrapper > article.type-post .nv-post-thumbnail-wrap {
+	display: none;
+}
 
 
 /* 10. COMMENTS                 */
