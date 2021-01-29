@@ -16,7 +16,7 @@ add_filter( 'comment_form_defaults', 'cat_amend_comment_form_fields' );
  */
 function cat_amend_comments_title( $comments_title ) {
 
-	return 'What others are saying about this action';
+	return 'What others are saying';
 }
 
 /**
@@ -27,11 +27,11 @@ function cat_amend_comments_title( $comments_title ) {
 function cat_amend_comment_form_fields( $defaults ) {
 
 	$defaults['title_reply']       = __( 'Join the discussion', 'cat' );
-	$defaults['label_submit']      = __( 'Submit your thoughts on this action', 'cat' );
+	$defaults['label_submit']      = __( 'Submit your thoughts', 'cat' );
 	
 	return $defaults;
 }
 
-function cat_add_other_discussion_options() {
-	echo 'blah';
-}
+// function cat_add_other_discussion_options() {
+// 	echo 'blah';
+// }
