@@ -11,7 +11,7 @@ on:
 jobs:
   # This workflow contains a single job called "deploy"
   deploy:
-    # The GitHub environment that will be availble for reference
+    # The GitHub environment that will be available for reference
     environment: "Staging"
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -19,6 +19,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # 1. Load SSH keys from GitHub repo settings
+      # 2. Use `scp` to transfer the contents to the target environment using the following flags
+      #    -i path to identity file
+      #    -P target port on the remote host
+      #    -r recursively copy directories
+      # 3. Raise a PR against production using: https://github.com/repo-sync/pull-request
       - uses: actions/checkout@v2
       - run: |
           mkdir ~/.ssh
