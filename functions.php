@@ -19,4 +19,4 @@ require 'inc/custom-post-types.php';
 require 'inc/blog.php';
 require 'inc/comments.php';
 require 'inc/action-pages.php';
-
+require 'inc/wordpress-seo.php';
