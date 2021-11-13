@@ -24,7 +24,6 @@ jobs:
       #    -i path to identity file
       #    -P target port on the remote host
       #    -r recursively copy directories
-      # 3. Raise a PR against production using: https://github.com/repo-sync/pull-request
       - uses: actions/checkout@v2
       - run: |
           mkdir ~/.ssh
@@ -32,9 +31,3 @@ jobs:
           chmod 600 ~/.ssh/gh_actions_key
           echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
           scp -i ~/.ssh/gh_actions_key -P ${{ secrets.SSH_PORT }} -r $(pwd) ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/wp-content/themes/
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: "production"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: ":robot: Release PR"
