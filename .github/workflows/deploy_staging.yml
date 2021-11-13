@@ -1,0 +1,40 @@
+name: Deploy to staging/Staging environment
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the `staging` branch
+  push:
+    branches: 
+    - staging
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    # The GitHub environment that will be available for reference
+    environment: "Staging"
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # 1. Load SSH keys from GitHub repo settings
+      # 2. Use `scp` to transfer the contents to the target environment using the following flags
+      #    -i path to identity file
+      #    -P target port on the remote host
+      #    -r recursively copy directories
+      # 3. Raise a PR against production using: https://github.com/repo-sync/pull-request
+      - uses: actions/checkout@v2
+      - run: |
+          mkdir ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/gh_actions_key
+          chmod 600 ~/.ssh/gh_actions_key
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          scp -i ~/.ssh/gh_actions_key -P ${{ secrets.SSH_PORT }} -r . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/wp-content/themes/
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "production"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: ":robot: Release PR"
